@@ -1,45 +1,10 @@
 <template>
   <v-app>
-
-   
-    <v-system-bar app> system bar   </v-system-bar>
-    <v-app-bar clipped-left app > app bar </v-app-bar>
-    <v-navigation-drawer clipped  app> v-navegation-drawer </v-navigation-drawer>
-    
-    <v-main>
-      <v-container fluid>
-        v-content
-      </v-container>
-    </v-main>
-
-    <v-footer app> 
-        footer
-    </v-footer>
-
-    <v-bottom-navigation app> 
-      v-bottom-navigation
-    </v-bottom-navigation>
-
+    <v-system-bar  height="20" style="display: flex; justify-content: center" app> system bar   </v-system-bar>
+    <v-app-bar clipped-left style="display: flex; justify-content: center" app> app bar </v-app-bar>
+    <v-navigation-drawer clipped   style="display: flex; justify-content: center" app> v-navegation-drawer </v-navigation-drawer>
+    <v-container fluid style="height: 100%; display: flex; align-items: center; justify-content: center" app > v-content</v-container>
+    <v-footer  style="display: flex; justify-content: center"  app> footer </v-footer>
+    <v-bottom-navigation style="display: flex; justify-content: center" app>  v-bottom-navigation </v-bottom-navigation>
 </v-app>
 </template>
-
-
-<style scoped>
-
-
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
-</style>
-
