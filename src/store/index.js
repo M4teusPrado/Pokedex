@@ -9,7 +9,7 @@ export default new Vuex.Store({
       {
         name: "Charizard",
         image: "Charizard.png",
-        type: "Fire",
+        type: "fire",
         description: "Ele cospe fogo que é quente o suficiente para derreter pedras. Pode causar incêndios florestais ao soprar chamas."
         
       }, 
@@ -29,6 +29,31 @@ export default new Vuex.Store({
         description: "Quando ele retrai seu longo pescoço em sua concha, ele esguicha água com força vigorosa."
 
       },
+
+      {
+        name: "Bulbasaur",
+        image: "Bulbasaur.png",
+        type: "Semente",
+        description: "Há uma semente de planta em suas costas desde o dia em que o Pokémon nasceu. A semente cresce lentamente"
+
+      },
+
+      {
+        name: "Ponyta",
+        image: "Ponyta.png",
+        type: "fire",
+        description: "Ele não pode funcionar corretamente quando é recém-nascido. Conforme ele corre com outros de sua espécie, suas pernas ficam mais fortes."
+
+      },
+
+      {
+        name: "Flareon",
+        image: "Flareon.png",
+        type: "fire",
+        description: "Depois de armazenar calor suficiente, a temperatura corporal desse Pokémon pode chegar a 1.700 graus Fahrenheit."
+
+      },
+
 
     ]
   },
