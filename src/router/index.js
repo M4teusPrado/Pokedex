@@ -2,6 +2,8 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Fire from '../views/Fire.vue'
+import Water from '../views/Water.vue'
+import Eletric from '../views/Eletric.vue'
 
 
 
@@ -18,6 +20,18 @@ const routes = [
     path: '/fire',
     name: 'Fire',
     component: Fire
+  },
+
+  {
+    path: '/water',
+    name: 'Water',
+    component: Water
+  },
+
+  {
+    path: '/eletric',
+    name: 'Eletric',
+    component: Eletric
   }
   
 ]

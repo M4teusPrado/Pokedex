@@ -26,7 +26,7 @@ import PokeCard from "@/components/PokeCard.vue";
     
     computed: {
       pokedex() {
-        return  store.state.pokedex
+        return  store.state.pokedex.filter((pokemon) => pokemon.type === "eletric")
       },
     },
   };
