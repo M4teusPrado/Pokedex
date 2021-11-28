@@ -11,7 +11,7 @@ export default new Vuex.Store({
         image: "Charizard.png",
         type: "Fire",
         description: "Ele cospe fogo que é quente o suficiente para derreter pedras. Pode causar incêndios florestais ao soprar chamas."
-
+        
       }, 
 
       {
@@ -28,7 +28,7 @@ export default new Vuex.Store({
         type: "water",
         description: "Quando ele retrai seu longo pescoço em sua concha, ele esguicha água com força vigorosa."
 
-      }
+      },
 
     ]
   },
