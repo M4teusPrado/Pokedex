@@ -23,7 +23,7 @@
       <v-divider />
 
       <v-list>
-        <v-list-item-group v-model="selectedNavbarItem">
+        <v-list-item-group >
           <v-list-item v-for="item in links" :key="item.title" link @click="$router.push(item.url)" >
 
             
@@ -48,7 +48,7 @@
     <Footer />
 
 
-    <v-bottom-navigation app dark v-model="selectedBottombarItem">
+    <v-bottom-navigation app dark>
       <v-btn v-for="(item, i) in links" :key="i" @click="$router.push(item.url)">
         <span>{{item.title}}</span>
         <v-icon>{{item.icon}}</v-icon>

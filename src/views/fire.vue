@@ -6,9 +6,7 @@
         <v-divider class="background-color: white mb-3"></v-divider>
 
         <v-row>
-          <v-col v-for="(planet, p) in planets" :key="p" cols="3">
-            <PlanetCard :planet="planet" />
-          </v-col>
+         
         </v-row>
       </v-col>
     </v-row>
@@ -17,15 +15,18 @@
 
 <script>
 
-import PlanetCard from "@/components/PlanetCard.vue";
-export default {
-  components: {
-    PlanetCard
-  },
-  computed: {
-    planets() {
-      return this.$store.state.planets;
+  
+
+
+  export default {
+    components: {
+     
     },
-  },
-};
+    
+    computed: {
+      pokedex() {
+        return this.$store.state.pokedex;
+      },
+    },
+  };
 </script>

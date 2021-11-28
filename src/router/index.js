@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
+import Fire from '../views/Fire.vue'
 
 
 
@@ -11,6 +12,12 @@ const routes = [
     path: '/',
     name: 'Home',
     component: Home
+  },
+
+  {
+    path: '/fire',
+    name: 'Fire',
+    component: Fire
   }
   
 ]
