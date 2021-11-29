@@ -1,7 +1,7 @@
 <template>
     <div>
 
-        <v-system-bar dark color="primary"  app >
+        <v-system-bar dark   app >
             <v-spacer></v-spacer>
             <v-icon>mdi-wifi-strength-4</v-icon>
             <v-icon>mdi-signal-cellular-outline</v-icon>
@@ -11,8 +11,10 @@
         </v-system-bar>
 
         <v-app-bar dark app absolute clipped-left elevation="0">
-            <v-icon left>mdi-ufo-outline</v-icon>
-            <v-toolbar-title>Pokedex</v-toolbar-title>
+            
+            <v-toolbar-title>Pokedex  </v-toolbar-title>
+
+            <v-toolbar-text> - Enciclopédia do mundo pokémon</v-toolbar-text>
 
            <v-spacer></v-spacer>
 

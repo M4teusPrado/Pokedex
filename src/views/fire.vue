@@ -1,7 +1,7 @@
 <template>
-  <v-content style="background-color: #303030; height: 100%">
+  <v-content class="content-fire">
     <v-row style="color: white" class="pa-4">
-      <v-col cols="12" style="text-align: justify">
+      <v-col cols="12" class="col">
         <h1>Fire</h1>
         <v-divider class="background-color: white mb-3"></v-divider>
         <v-row>
@@ -13,6 +13,21 @@
     </v-row>
   </v-content>
 </template>
+
+<style scope > 
+
+    .content-fire {
+        background-color: brown;
+        height: 100%;
+    }
+
+    .col {
+        text-align: justify;
+    }
+
+</style >
+
+
 
 <script>
 

@@ -2,7 +2,7 @@
 <v-app>
     <Navbar app />
 
-    <v-navigation-drawer dark app permanent absolute clipped style="height: 100%">
+    <v-navigation-drawer dark app color="grey darken-3" permanent absolute clipped style="height: 100%">
 
       <div>
         <v-list-item>
@@ -15,43 +15,76 @@
             <v-list-item-title style="font-weight: 500; font-size: 110%"
               >Brock</v-list-item-title
             >
-            <v-list-item-subtitle>brock@gmail.com</v-list-item-subtitle>
+            <v-list-item-subtitle>Mestre II</v-list-item-subtitle>
           </v-list-item-content>
         </v-list-item>
       </div>
 
       <v-divider />
-
       <v-list>
         <v-list-item-group >
-          <v-list-item v-for="item in links" :key="item.title" link @click="$router.push(item.url)" >
-
-            
+          <v-list-item link @click="$router.push('/')" >
             <v-list-item-icon>
-              <v-icon> {{ item.icon }} </v-icon>
+              <v-icon> mdi-home </v-icon>
             </v-list-item-icon>
-
             <v-list-item-content>
-              <v-list-item-title v-text="item.title"></v-list-item-title>
+              <v-list-item-title > Home</v-list-item-title>
             </v-list-item-content>
+          </v-list-item>
 
+          <v-list-item link @click="$router.push('/fire')" >
+            <v-list-item-icon>
+              <v-icon> mdi-fire </v-icon>
+            </v-list-item-icon>
+            <v-list-item-content>
+              <v-list-item-title > Fire</v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+
+          <v-list-item link @click="$router.push('/water')" >
+            <v-list-item-icon>
+              <v-icon> mdi-water </v-icon>
+            </v-list-item-icon>
+            <v-list-item-content>
+              <v-list-item-title > Water</v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+
+          <v-list-item link @click="$router.push('/eletric')" >
+            <v-list-item-icon>
+              <v-icon> mdi-flash </v-icon>
+            </v-list-item-icon>
+            <v-list-item-content>
+              <v-list-item-title > Eletric </v-list-item-title>
+            </v-list-item-content>
           </v-list-item>
         </v-list-item-group>
       </v-list>
 
     </v-navigation-drawer>
 
-     <v-main class="pa-0">
+    <v-main class="pa-0">
       <router-view></router-view>
     </v-main>
 
     <Footer />
 
 
-    <v-bottom-navigation app dark>
-      <v-btn v-for="(item, i) in links" :key="i" @click="$router.push(item.url)">
-        <span>{{item.title}}</span>
-        <v-icon>{{item.icon}}</v-icon>
+    <v-bottom-navigation app dark color="grey darken-3">
+      <v-btn link @click="$router.push('/')">
+        <v-icon>mdi-home</v-icon>
+      </v-btn>
+
+        <v-btn link @click="$router.push('/fire')">
+        <v-icon>mdi-fire</v-icon>
+      </v-btn>
+
+      <v-btn link @click="$router.push('/water')">
+        <v-icon>mdi-water</v-icon>
+      </v-btn>
+
+      <v-btn link @click="$router.push('/eletric')">
+        <v-icon>mdi-flash</v-icon>
       </v-btn>
     </v-bottom-navigation>
 
@@ -81,29 +114,7 @@ export default {
 
   data() {
     return {
-      links: 
-      [
-        {
-          title: "Home",
-          icon: "mdi-home",
-          url: "/",
-        },
-        {
-          title: "Fire",
-          icon: "mdi-fire",
-          url: "/fire",
-        },
-        {
-          title: "Water",
-          icon: "mdi-water",
-          url: "/water",
-        },
-        {
-          title: "Eletric",
-          icon: "mdi-flash",
-          url: "/eletric",
-        }
-      ]
+      //
     } 
   }
 }

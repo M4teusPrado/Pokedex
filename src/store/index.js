@@ -54,6 +54,22 @@ export default new Vuex.Store({
 
       },
 
+      {
+        name: "Horsea",
+        image: "Horsea.png",
+        type: "water",
+        description: "Horsea faz sua casa nos oceanos com correntes suaves. Se este Pokémon estiver sob ataque, ele cospe tinta preta como breu e escapa."
+
+      },
+
+      {
+        name: "Dewgong",
+        image: "Dewgong.png",
+        type: "water",
+        description: "Todo o seu corpo é branco como a neve. Sem se machucar nem mesmo com o frio intenso, ele nada com força em águas geladas."
+
+      },
+
 
     ]
   },

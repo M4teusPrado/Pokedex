@@ -1,5 +1,5 @@
 <template>
-  <v-card dark>
+  <v-card dark >
     <v-img
       height="350px" contain :src="require(`@/assets/${pokemon.image}`)"
     ></v-img>
