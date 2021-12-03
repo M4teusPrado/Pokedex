@@ -12,9 +12,8 @@
 
         <v-app-bar dark app absolute clipped-left elevation="0">
             
-            <v-toolbar-title>Pokedex  </v-toolbar-title>
+            <v-toolbar-title>Pokedex - Enciclopédia do mundo pokémon </v-toolbar-title>
 
-            <v-toolbar-text> - Enciclopédia do mundo pokémon</v-toolbar-text>
 
            <v-spacer></v-spacer>
 
@@ -37,6 +36,9 @@
 
 <script>
 export default {
+
+
+
     
 }
 </script>

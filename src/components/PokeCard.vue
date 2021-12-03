@@ -13,7 +13,29 @@
 </template>
 
 <script>
+
+
+import store from '@/store/index.js';
+
+
 export default {
-    props: ["pokemon"]
+  props: ['urlPokemon'],
+
+
+  computed : {
+    pokemon() {
+      return store.state.pokemon
+    }
+  },
+
+  methods: {
+    fetch() {
+      //
+    }
+  },
+
+  async created() {
+    await store.dispatch("FechtPokemon", this.urlPokemon)
+  }
 }
 </script>

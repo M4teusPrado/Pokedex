@@ -2,7 +2,10 @@
 <v-app>
     <Navbar app />
 
+
+
     <v-navigation-drawer dark app color="grey darken-3" permanent absolute clipped style="height: 100%">
+
 
       <div>
         <v-list-item>
@@ -63,11 +66,16 @@
 
     </v-navigation-drawer>
 
+
+
     <v-main class="pa-0">
       <router-view></router-view>
     </v-main>
 
+ 
     <Footer />
+
+           
 
 
     <v-bottom-navigation app dark color="grey darken-3">
@@ -87,6 +95,9 @@
         <v-icon>mdi-flash</v-icon>
       </v-btn>
     </v-bottom-navigation>
+
+    
+   
 
 
 </v-app>
@@ -116,6 +127,13 @@ export default {
     return {
       //
     } 
+  },
+
+  methods: {
+    fetch() {
+      console.log("Deu certo")
+    }
   }
+
 }
 </script>

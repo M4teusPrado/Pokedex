@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import axios  from 'axios'
 
 Vue.use(Vuex)
 
@@ -71,6 +72,49 @@ export default new Vuex.Store({
       },
 
 
-    ]
+    ],
+
+
+    listadeUrls:[],
+
+    pokemon: null
+
+
+  },
+
+  mutations: {
+    SET_URL(state, payload) {
+      state.listadeUrls = payload
+    }, 
+
+    SET_POKEMON(state, payload) {
+      state.pokemon = payload
+    }
+  },
+
+  actions: {
+    FetchListadeUrls({commit}) {
+
+       axios.get('https://pokeapi.co/api/v2/type/electric')
+      .then(p => {
+        // this.listadeUrls = p.data.pokemon
+        const payLoad = p.data.pokemon
+        
+        commit('SET_URL', payLoad)
+      })
+      .catch(err => console.log(err));
+    },
+
+    FechtPokemon({commit}, url) {
+      axios.get(url)
+      .then(p => {
+       const payLoad = p.data
+       commit('SET_POKEMON', payLoad)
+     })
+     .catch(err => console.log(err));
+   
+   },
+
+
   },
 })
