@@ -1,13 +1,14 @@
 <template>
   <v-card dark >
+
     <v-img
-      height="350px" contain :src="require(`@/assets/${pokemon.image}`)"
+      height="350px" contain :src="pokemon.sprites.front_default"
     ></v-img>
     <v-card-title> 
       {{ pokemon.name }} 
     </v-card-title>
     <v-card-text>  
-      {{ pokemon.description }}.. 
+      <!-- Skills: {{pokemon.moves.map(item => ' ' + item.move.name).toString()}} -->
     </v-card-text>
   </v-card>
 </template>
@@ -15,27 +16,9 @@
 <script>
 
 
-import store from '@/store/index.js';
-
-
 export default {
-  props: ['urlPokemon'],
+  props: ['pokemon'],
 
 
-  computed : {
-    pokemon() {
-      return store.state.pokemon
-    }
-  },
-
-  methods: {
-    fetch() {
-      //
-    }
-  },
-
-  async created() {
-    await store.dispatch("FechtPokemon", this.urlPokemon)
-  }
 }
 </script>

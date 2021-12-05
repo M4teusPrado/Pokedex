@@ -6,10 +6,7 @@
         <v-divider class="background-color: white mb-3"></v-divider>
         <v-row>
            <v-col v-for="(p, u) in this.listadeUrls" :key="u" cols="3">
-            <PokeCard :urlPokemon= "p.pokemon.url" />
-
-      
-
+             <PokeCard :pokemon="p.data"/>
            </v-col>
         </v-row>
       </v-col>
@@ -18,25 +15,20 @@
 </template>
 
 <style scope > 
-
     .main-eletric {
         background-color:   #E65100;
         height: 100%;
     }
-
     .col {
         text-align: justify;
     }
-
 </style>
 
 
 <script>
 
-
-import PokeCard from "@/components/PokeCard.vue";
-// import axios  from 'axios'
 import store from '@/store/index.js';
+import PokeCard from "@/components/PokeCard.vue";
 
   export default {
     components: {
@@ -45,32 +37,13 @@ import store from '@/store/index.js';
 
     computed : {
       listadeUrls() {
-        return store.state.listadeUrls
+        return store.state.pokemons
       }
     },
-
-
-    data() {
-      return {
-        aux: [],
-        pokedex: []
-      }
-    },
-    methods: {
-      fetch() {
-       console.log("Deu certo!")
-      }
-    },
-
+    
     async created() {
-      await store.dispatch("FetchListadeUrls")
+      await store.dispatch("FetchListadeUrls", "electric")
     },
-
-    // list() {
-    //   console.log(listadeUrls)
-    // }
-
-
   };
 
 </script>

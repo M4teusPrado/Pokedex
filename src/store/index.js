@@ -74,46 +74,36 @@ export default new Vuex.Store({
 
     ],
 
-
-    listadeUrls:[],
-
-    pokemon: null
-
-
+    pokemons:[]
   },
 
   mutations: {
-    SET_URL(state, payload) {
-      state.listadeUrls = payload
-    }, 
-
     SET_POKEMON(state, payload) {
-      state.pokemon = payload
+      console.log(payload)
+      state.pokemons = payload
+
     }
   },
 
   actions: {
-    FetchListadeUrls({commit}) {
+    FetchListadeUrls({commit}, type) {
 
-       axios.get('https://pokeapi.co/api/v2/type/electric')
+      axios.get('https://pokeapi.co/api/v2/type/' + type + '?limit=1')
       .then(p => {
-        // this.listadeUrls = p.data.pokemon
         const payLoad = p.data.pokemon
-        
-        commit('SET_URL', payLoad)
+        const pokedex = []
+
+        payLoad.forEach(p => {
+          axios.get(p.pokemon.url)
+          .then( pokemon => {
+            pokedex.push(pokemon)
+          })
+        });
+
+        commit('SET_POKEMON', pokedex)
       })
       .catch(err => console.log(err));
-    },
-
-    FechtPokemon({commit}, url) {
-      axios.get(url)
-      .then(p => {
-       const payLoad = p.data
-       commit('SET_POKEMON', payLoad)
-     })
-     .catch(err => console.log(err));
-   
-   },
+    }
 
 
   },
